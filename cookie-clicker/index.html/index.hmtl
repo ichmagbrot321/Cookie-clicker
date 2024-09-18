@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Clicker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-image: url('https://i.ibb.co/zXGys0b/0434d71b-d04e-4a7f-9c42-76cd0df52620.webp');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin-top: 50px;
+            color: white;
+        }
+
+        #cookie {
+            width: 200px;
+            height: 200px;
+            background-image: url('https://tse3.mm.bing.net/th?id=OIP.__kzWH6ElgtaD8xUasKpdwHaKt&pid=Api');
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        #golden-cookie {
+            width: 100px;
+            height: 100px;
+            background-image: url('https://tse4.mm.bing.net/th?id=OIP.mbwacT53ZF50le-E7orCYQHaEZ&pid=Api');
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%;
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            cursor: pointer;
+            display: none;
+        }
+
+        #counter {
+            font-size: 2em;
+            margin-top: 20px;
+        }
+
+        #shop {
+            margin-top: 30px;
+        }
+
+        .upgrade {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            margin: 5px;
+            border-radius: 10px;
+            cursor: pointer;
+            display: inline-block;
+            color: white;
+        }
+
+        .upgrade:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        #message {
+            margin-top: 20px;
+            color: red;
+            font-size: 1.2em;
+        }
+
+        #achievements {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+
+        #achievements-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .cheater-badge {
+            margin-top: 20px;
+            color: red;
+            font-size: 1.5em;
+            border: 2px solid red;
+            padding: 10px;
+            display: inline-block;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Cookie Clicker</h1>
+    <div id="cookie">
+        <div id="golden-cookie"></div>
+    </div>
+    <div id="counter">Cookies: 0</div>
+
+    <div id="shop">
+        <div class="upgrade" onclick="buyCursor()">Cursor (Kosten: <span id="cursorCost">10</span> Cookies) - Klicke automatisch alle 2 Sekunden</div>
+        <div class="upgrade" onclick="buyGrandma()">Oma (Kosten: <span id="grandmaCost">100</span> Cookies) - Produziert 10 Cookies pro Sekunde</div>
+        <div class="upgrade" onclick="buyMultiplier()">Klick-Multiplikator (Kosten: <span id="multiplierCost">50</span> Cookies) - Verdopple deine Klicks</div>
+    </div>
+
+    <div id="message"></div>
+
+    <div id="achievements">
+        <h2>Achievements</h2>
+        <ul id="achievements-list"></ul>
+    </div>
+
+    <div id="cheater-message"></div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
